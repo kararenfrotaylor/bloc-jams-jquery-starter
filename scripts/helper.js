@@ -4,6 +4,6 @@ class Helper {
   }
 }
 
-$('#time-control .total-time').text()
+$('#time-control .total-time').text(player.currentlyPlaying.duration);
 
 const helper = new Helper();
