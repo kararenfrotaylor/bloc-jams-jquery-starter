@@ -7,6 +7,8 @@
   $('button#next').on('click', function () {
     if (player.playState !== 'playing') {return;}
 
+    $('#time-control .total-time').text(player.currentlyPlaying.duration);
+
     const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
     const nextSongIndex = currentSongIndex + 1;
     if (nextSongIndex >= album.songs.length) {return;}
@@ -34,6 +36,8 @@
 
   $('button#previous').on('click', function (){
     if (player.playState !== 'playing') {return;}
+
+    $('#time-control .total-time').text(player.currentlyPlaying.duration);
 
     const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
     const previousSongIndex = currentSongIndex - 1;
